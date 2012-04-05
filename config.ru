@@ -31,7 +31,8 @@ class HelloController < ActionController::Base
         <body>
           <h3>I am the smallest rails app!</h3>
           <p>Here is my source code:</p>
-          #{response.body}
+          <p>#{response.body}</p>
+          <a href="https://github.com/artemave/thesmallestrailsapp.com">Make me smaller</a>
         </body>
       </html>
     }
