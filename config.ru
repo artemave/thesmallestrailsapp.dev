@@ -9,6 +9,7 @@ class TheSmallestRailsApp < Rails::Application
 
   config.secret_token = "asdf8sadfas8dlj2342b3bv23bvn23o3u"
   config.logger       = Logger.new STDOUT
+  config.threadsafe!
 end
 
 require 'net/http'
