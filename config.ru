@@ -9,7 +9,6 @@ class TheSmallestRailsApp < Rails::Application
 
   config.secret_token = "asdf8sadfas8dlj2342b3bv23bvn23o3u"
   config.logger       = Logger.new STDOUT
-  config.threadsafe!
 end
 
 require 'net/http'
@@ -39,6 +38,6 @@ class HelloController < ActionController::Base
   end
 end
 
-TheSmallestRailsApp.initialize!
+TheSmallestRailsApp.initialize! rescue false # what could possibly go wrong?
 
 run TheSmallestRailsApp
