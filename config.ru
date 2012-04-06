@@ -1,7 +1,6 @@
 require 'bundler/setup'
 require 'action_controller/railtie'
-require 'net/http'
-require 'uri'
+require 'coderay'
 
 class TheSmallestRailsApp < Rails::Application
   routes.append { root to: 'hello#world' }
@@ -10,10 +9,7 @@ end
 
 class HelloController < ActionController::Base
   def world
-    uri  = URI.parse 'http://hilite.me/api'
-    form = {'lexer' => 'ruby', 'code' => File.read(__FILE__)}
-
-    response = Net::HTTP.post_form uri, form
+    code = CodeRay.scan(File.read(__FILE__), :ruby).div(line_numbers: :table)
 
     render inline: %Q{
       <!DOCTYPE html>
@@ -24,7 +20,7 @@ class HelloController < ActionController::Base
         <body>
           <h3>I am the smallest rails app!</h3>
           <p>Here is my source code:</p>
-          <p>#{response.body}</p>
+          <p>#{code}</p>
           <a href="https://github.com/artemave/thesmallestrailsapp.com">Make me smaller</a>
         </body>
       </html>
