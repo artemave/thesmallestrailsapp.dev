@@ -8,7 +8,7 @@ class TheSmallestRailsApp < Rails::Application
   routes.append { root to: 'hello#world' }
 
   config.secret_token = 'a'*30
-  config.logger       = Logger.new STDOUT
+  config.logger       = Logger.new $>
 end
 
 class HelloController < ActionController::Base
