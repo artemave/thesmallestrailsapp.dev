@@ -7,8 +7,8 @@ require 'uri'
 class TheSmallestRailsApp < Rails::Application
   routes.append { root to: 'hello#world' }
 
-  config.secret_token = 'not so secret but long enough to please rails'
-  config.logger       = Logger.new STDOUT
+  config.secret_token = 'a'*30
+  config.logger       = Logger.new $>
 end
 
 class HelloController < ActionController::Base
