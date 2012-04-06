@@ -5,9 +5,7 @@ require 'net/http'
 require 'uri'
 
 class TheSmallestRailsApp < Rails::Application
-  routes.append do
-    root to: 'hello#world'
-  end
+  routes.append { root to: 'hello#world' }
 
   config.secret_token = 'not so secret but long enough to please rails'
   config.logger       = Logger.new STDOUT
