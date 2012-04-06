@@ -1,5 +1,4 @@
 require 'bundler/setup'
-require 'rails'
 require 'action_controller/railtie'
 require 'net/http'
 require 'uri'
