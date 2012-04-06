@@ -24,7 +24,6 @@ class HelloController < ActionController::Base
       <!DOCTYPE html>
       <html lang="en">
         <head>
-          <meta charset="utf-8">
           <title>The Smallest Rails App</title>
         </head>
         <body>
