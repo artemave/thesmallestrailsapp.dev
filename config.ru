@@ -7,7 +7,7 @@ end
 
 class HelloController < ActionController::Base
   def world
-    code = CodeRay.scan(File.read(__FILE__), :ruby).div(line_numbers: :table)
+    code = CodeRay.scan_file(__FILE__, :ruby).div(line_numbers: :table)
 
     render inline: %Q{
       <!DOCTYPE html>
