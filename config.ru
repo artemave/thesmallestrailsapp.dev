@@ -2,7 +2,7 @@
 
 run class TheSmallestRailsApp < Rails::Application
   config.secret_token = routes.append { root to: 'hello#world' }.inspect
-  tap &:initialize!
+  tap &:initialize! rescue false # or be shot by heroku
 end
 
 class HelloController < ActionController::Base
