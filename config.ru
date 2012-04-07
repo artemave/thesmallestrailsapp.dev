@@ -1,10 +1,8 @@
-require 'bundler/setup'
-require 'action_controller/railtie'
-require 'coderay'
+%w(action_controller/railtie coderay).each &method(:require)
 
-class TheSmallestRailsApp < Rails::Application
-  routes.append { root to: 'hello#world' }
-  config.secret_token = 'a'*30
+run class TheSmallestRailsApp < Rails::Application
+  config.secret_token = routes.append { root to: 'hello#world' }.inspect
+  tap &:initialize!
 end
 
 class HelloController < ActionController::Base
@@ -27,7 +25,3 @@ class HelloController < ActionController::Base
     }
   end
 end
-
-TheSmallestRailsApp.initialize! rescue false # what could possibly go wrong?
-
-run TheSmallestRailsApp
