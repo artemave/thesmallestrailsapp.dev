@@ -1,8 +1,9 @@
 %w(action_controller/railtie coderay).each &method(:require)
 
-class TheSmallestRailsApp < Rails::Application
+run TheSmallestRailsApp ||= Class.new(Rails::Application) {
   config.secret_token = routes.append { root to: 'hello#world' }.inspect
-end
+  tap &:initialize!
+}
 
 class HelloController < ActionController::Base
   def world
@@ -18,6 +19,3 @@ class HelloController < ActionController::Base
     }
   end
 end
-
-TheSmallestRailsApp.initialize! rescue false # or be shot by heroku
-run TheSmallestRailsApp
