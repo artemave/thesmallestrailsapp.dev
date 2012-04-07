@@ -2,8 +2,7 @@ require 'action_controller/railtie'
 require 'coderay'
 
 class TheSmallestRailsApp < Rails::Application
-  routes.append { root to: 'hello#world' }
-  config.secret_token = 'a'*30
+  config.secret_token = routes.append { root to: 'hello#world' }.inspect
 end
 
 class HelloController < ActionController::Base
