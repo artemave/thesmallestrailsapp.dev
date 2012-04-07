@@ -1,8 +1,9 @@
 require 'action_controller/railtie'
 require 'coderay'
 
-class TheSmallestRailsApp < Rails::Application
+run class TheSmallestRailsApp < Rails::Application
   config.secret_token = routes.append { root to: 'hello#world' }.inspect
+  tap &:initialize!
 end
 
 class HelloController < ActionController::Base
@@ -25,5 +26,3 @@ class HelloController < ActionController::Base
     }
   end
 end
-
-run TheSmallestRailsApp.tap &:initialize!
