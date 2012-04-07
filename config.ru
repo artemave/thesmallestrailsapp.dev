@@ -11,17 +11,11 @@ class HelloController < ActionController::Base
 
     render inline: %Q{
       <!DOCTYPE html>
-      <html lang="en">
-        <head>
-          <title>The Smallest Rails App</title>
-        </head>
-        <body>
-          <h3>I am the smallest rails app!</h3>
-          <p>Here is my source code:</p>
-          <p>#{code}</p>
-          <a href="https://github.com/artemave/thesmallestrailsapp.com">Make me smaller</a>
-        </body>
-      </html>
+      <title>The Smallest Rails App</title>
+      <h3>I am the smallest rails app!</h3>
+      <p>Here is my source code:</p>
+      #{code}
+      <a href="https://github.com/artemave/thesmallestrailsapp.com">Make me smaller</a>
     }
   end
 end
