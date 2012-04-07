@@ -1,4 +1,3 @@
-require 'bundler/setup'
 require 'action_controller/railtie'
 require 'coderay'
 
