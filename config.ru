@@ -28,6 +28,4 @@ class HelloController < ActionController::Base
   end
 end
 
-TheSmallestRailsApp.initialize! rescue false # what could possibly go wrong?
-
-run TheSmallestRailsApp
+run TheSmallestRailsApp.tap &:initialize!
