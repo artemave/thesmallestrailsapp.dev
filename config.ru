@@ -6,6 +6,7 @@ run TheSmallestRailsApp ||= Class.new(Rails::Application) {
 }
 
 class HelloController < ActionController::Base
+  caches_page :world
   def world
     render inline: %Q{
       <!DOCTYPE html>
