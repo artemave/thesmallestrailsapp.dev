@@ -13,7 +13,7 @@ class HelloController < ActionController::Base
       <h3>I am the smallest rails app!</h3>
       <p>Here is my source code:</p>
       #{CodeRay.scan_file(__FILE__, :ruby).div(line_numbers: :table)}
-      <a href='http://goo.gl/YdRpy'>Make me smaller</a>
+      <a href='//goo.gl/YdRpy'>Make me smaller</a>
     "
   end
 end
