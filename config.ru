@@ -13,6 +13,5 @@ run TheSmallestRailsApp ||= Class.new(Rails::Application) {
       "]]
     }
   }.to_s
-  config.threadsafe!
   initialize!
 }
