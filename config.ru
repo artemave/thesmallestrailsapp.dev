@@ -1,6 +1,6 @@
 %w(action_controller/railtie coderay).map &method(:require)
 
-run TheSmallestRailsApp ||= Class.new(Rails::Application) {
+run Class.new(Rails::Application) {
   config.secret_token = routes.append {
     root to: proc {
       [200, {"Content-Type" => "text/html"}, ["
@@ -13,5 +13,5 @@ run TheSmallestRailsApp ||= Class.new(Rails::Application) {
       "]]
     }
   }.to_s
-  initialize!
+  initialize! unless @initialized
 }
