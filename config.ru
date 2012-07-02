@@ -7,7 +7,7 @@ run TheSmallestRailsApp ||= Class.new(Rails::Application) {
 
 class HelloController < ActionController::Base
   def world
-    render inline: "
+    render text: "
       <!DOCTYPE html>
       <title>The Smallest Rails App</title>
       <h3>I am the smallest rails app!</h3>
