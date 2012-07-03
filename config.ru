@@ -7,8 +7,8 @@ run TheSmallestRailsApp ||= Class.new(Rails::Application) {
         title @title = "The Smallest Rails App"
         h3 "I am #@title!"
         p "Here is my source code:"
-        p { CodeRay.scan_file(__FILE__, :ruby).div(line_numbers: :table) }
-        a "Make me smaller", href: "//goo.gl/YdRpy"
+        div { CodeRay.scan_file(__FILE__, :ruby).div(line_numbers: :table) }
+        p { a "Make me smaller", href: "//goo.gl/YdRpy" }
       }]]
     }
   }.to_s
