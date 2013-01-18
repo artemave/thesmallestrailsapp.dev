@@ -1,4 +1,5 @@
-%w(action_controller/railtie coderay markaby).map &method(:require)
+require "bundler/setup"
+Bundler.require
 
 run TheSmallestRailsApp ||= Class.new(Rails::Application) {
   config.secret_token = routes.append {
