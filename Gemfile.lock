@@ -89,4 +89,4 @@ DEPENDENCIES
   coderay
   markaby
   rack-test
-  rails (~> 3.2.11)
+  rails (>= 3.2.11)
