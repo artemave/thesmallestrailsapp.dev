@@ -1,7 +1,7 @@
 require "bundler/setup"
 Bundler.require
 
-run TheSmallestRailsApp ||= Class.new(Rails::Application) {
+run Class.new(Rails::Application) {
   config.secret_token = routes.append {
     root to: proc {
       [200, {"Content-Type" => "text/html"}, [Markaby::Builder.new.html {
@@ -13,5 +13,5 @@ run TheSmallestRailsApp ||= Class.new(Rails::Application) {
       }]]
     }
   }.to_s
-  initialize!
+  initialize! unless @initialized
 }
