@@ -1,4 +1,3 @@
-require "bundler/setup"
 Bundler.require
 
 run TheSmallestRailsApp ||= Class.new(Rails::Application) {
