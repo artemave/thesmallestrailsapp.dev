@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.1.0'
+ruby '2.1.1'
 
 gem 'railties', '4.0.3', require: %w(action_controller rails)
 gem 'coderay'
