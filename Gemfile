@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.1.0'
 
-gem 'rails', '3.2.16'
+gem 'railties', '4.0.3', require: %w(action_controller rails)
 gem 'coderay'
 gem 'markaby'
 
