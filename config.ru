@@ -1,8 +1,7 @@
 Bundler.require
 
 run TheSmallestRailsApp ||= Class.new(Rails::Application) {
-  config.eager_load =
-  !!config.secret_key_base = routes.append {
+  config.secret_key_base = routes.append {
     root to: proc {
       [200, {"Content-Type" => "text/html"}, [Markaby::Builder.new.html {
         title @title = "The Smallest Rails App"
