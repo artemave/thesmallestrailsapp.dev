@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-ruby '2.1.2'
+ruby '2.2.2'
 
-gem 'railties', '4.2.0', require: %w(action_controller rails)
+gem 'railties', '4.2.3', require: %w(action_controller rails)
 gem 'coderay'
 gem 'markaby'
 
