@@ -1,4 +1,4 @@
 language: ruby
 script: bundle exec ruby test.rb
 rvm:
-  - 2.1.2
+  - 2.2.2
