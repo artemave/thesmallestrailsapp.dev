@@ -1,4 +1,5 @@
 language: ruby
+sudo: false
 script: bundle exec ruby test.rb
 rvm:
   - 2.2.2
