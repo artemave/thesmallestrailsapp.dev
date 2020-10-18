@@ -9,7 +9,7 @@ class TestApp < Minitest::Test
   end
 
   def test_root
-    get '/'
+    get 'http://localhost'
     assert last_response.ok?
   end
 end

@@ -1,9 +1,9 @@
-FROM rails:4.2.3
+FROM ruby:2.7.2
 
 WORKDIR /app
 
 ADD Gemfile* /app/
-RUN bundle install --without test
+RUN bundle install
 
 ADD . /app/
 
