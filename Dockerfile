@@ -7,6 +7,4 @@ RUN bundle install
 
 ADD . /app/
 
-EXPOSE 9292
-
 CMD bundle exec rackup --host 0.0.0.0
