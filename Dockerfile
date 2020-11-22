@@ -7,4 +7,6 @@ RUN bundle install
 
 ADD . /app/
 
-CMD bundle exec rackup --host 0.0.0.0
+EXPOSE 80
+
+CMD bundle exec rackup --host 0.0.0.0 --port 80
