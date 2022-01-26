@@ -1,3 +1,3 @@
-[![Build Status](https://travis-ci.org/artemave/thesmallestrailsapp.com.png?branch=master)](https://travis-ci.org/artemave/thesmallestrailsapp.com)
+[![Build Status](https://github.com/artemave/thesmallestrailsapp.dev/actions/workflows/ruby.yml/badge.svg)](https://github.com/artemave/thesmallestrailsapp.dev/actions/workflows/ruby.yml)
 
 The smallest Rails app - https://thesmallestrailsapp.dev
