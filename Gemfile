@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'railties', '7.0.1', require: %w(action_controller rails)
+gem 'railties', '8.1.3', require: %w(action_controller rails)
 gem 'coderay'
 gem 'markaby'
 
