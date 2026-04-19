@@ -8,6 +8,10 @@ servers:
 proxy:
   ssl: true
   host: thesmallestrailsapp.dev
+  healthcheck:
+    path: /
+    interval: 3
+    timeout: 5
 
 registry:
   server: ghcr.io
