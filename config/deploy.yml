@@ -1,0 +1,19 @@
+service: thesmallestrailsapp
+image: artemave/thesmallestrailsapp
+
+servers:
+  web:
+    - 23.88.36.68
+
+proxy:
+  ssl: true
+  host: thesmallestrailsapp.dev
+
+registry:
+  server: ghcr.io
+  username: artemave
+  password:
+    - KAMAL_REGISTRY_PASSWORD
+
+builder:
+  arch: amd64
